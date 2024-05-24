@@ -1,0 +1,7 @@
+type,categoria,valor,data
+RECEITA,Salario,1000,2019-01-01
+DESPESA,Aluguel,-500,2019-01-02
+DESPESA,Alimetacao,-100,2019-01-03
+RECEITA,Ferias,100,2019-01-04
+DESPESA, Alimentacao, -10.0, 2019-01-05
+DESPESA, Alimentacao, -10.0, 2019-01-05
