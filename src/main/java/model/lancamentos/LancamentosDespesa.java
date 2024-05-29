@@ -14,7 +14,7 @@ public class LancamentosDespesa extends Lancamentos {
 
   @Override
   public ArrayList<Map<String, String>> getAll() {
-    ArrayList<Map<String, String>> listaLancamentos = super.getAll();
+    ArrayList<Map<String, String>> listaLancamentos = super.getAll();// o que é e pra que serve? Map é o que o professor vai perguntar na próxima aula? 
     ArrayList<Map<String, String>> listaDespesas = new ArrayList<Map<String, String>>();
 
     for (Map<String, String> i : listaLancamentos) {

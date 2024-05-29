@@ -6,14 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import io.github.cdimascio.dotenv.Dotenv;
+import io.github.cdimascio.dotenv.Dotenv;// import da biblioteca Dotenv, utilizada para criar um arquivo .env na raiz do projeto, podendo ser criadas variaveis dentro dele. 
+
+// Essa classe existe para que não precise ser solicitado o caminho do arquivo mais vezes, apenas alterar a linha 18 
+
 
 public class DB {
   private String fileName;
 
   public DB() {
     Dotenv dotenv = Dotenv.load();
-    this.fileName = dotenv.get("DB_FILE");
+    this.fileName = dotenv.get("DB_FILE"); // utilizado para não escrever no código principal. Podendo ser alterado por aqui
   }
 
   public boolean insert(String line) {

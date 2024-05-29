@@ -5,20 +5,20 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import model.DB;
-import model.enums.TiposCategorias;
+import model.enums.TiposCategorias; //  o que é DB? 
 
 public class Lancamentos {
   private DB db = new DB();
 
-  protected void cadastrarInDb(TiposCategorias type, Enum<?> categoria, double valor, LocalDate data) {
-    String formattedQuery = String.format(
+  protected void cadastrarInDb(TiposCategorias type, Enum<?> categoria, double valor, LocalDate data) {// a categoria, despesa ou receita é buscada pelo type. 
+    String formattedString = String.format(
         "%s, %s, %s, %s",
         type,
         categoria,
         valor,
         data);
 
-    this.db.insert(formattedQuery);
+    this.db.insert(formattedString);// variavel criada para representar que é uma string que vai ser formatada conforme o dado inserido. 
   }
 
   public ArrayList<Map<String, String>> getAll() {
