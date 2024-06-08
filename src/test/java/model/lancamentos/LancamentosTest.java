@@ -90,12 +90,12 @@ public class LancamentosTest {
     mockReturn.add(Map.of(
         "type", "DESPESA",
         "categoria", "Alimentacao",
-        "valor", "100.0",
+        "valor", "-100.0",
         "data", LocalDate.of(2022, 01, 02).toString()));
     mockReturn.add(Map.of(
         "type", "DESPESA",
         "categoria", "Alimentacao",
-        "valor", "100.0",
+        "valor", "-100.0",
         "data", LocalDate.of(2022, 01, 03).toString()));
 
     when(db.getAll()).thenReturn(mockReturn);

@@ -24,7 +24,7 @@ public class Contador {
     return this.calcularSaldo(listaLancamentos);
   }
 
-  private double calcularSaldo(ArrayList<Map<String, String>> lancamentos) {
+  public double calcularSaldo(ArrayList<Map<String, String>> lancamentos) {
     double saldoCalculado = 0;
 
     for (Map<String, String> i : lancamentos) {
