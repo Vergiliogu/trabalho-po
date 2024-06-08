@@ -34,7 +34,7 @@ public class Lancamentos {
     }
 
     ArrayList<Map<String, String>> lancamentos = this.getAll();
-    ArrayList<Map<String, String>> lancamentosFiltrados = new ArrayList<Map<String, String>>();
+    ArrayList<Map<String, String>> lancamentosFiltrados = new ArrayList<>();
 
     for (Map<String, String> i : lancamentos) {
       LocalDate dataLancamento = LocalDate.parse(i.get("data"));
