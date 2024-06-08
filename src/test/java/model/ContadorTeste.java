@@ -33,35 +33,23 @@ public class ContadorTeste {
 
     @Test
     public void deveRetornarSaldoPorPeriodo(){
-        ArrayList<Map<String, String>> extrato = new ArrayList<>();
-        extrato.add(Map.of(
+        ArrayList<Map<String, String>> listaLancamentos = new ArrayList<>();
+        listaLancamentos.add(Map.of(
         "type", "RECEITA",
         "categoria", "Salario",
         "valor", "3000.0",
         "data", LocalDate.of(2022, 01, 01).toString()));
-        extrato.add(Map.of(
+        listaLancamentos.add(Map.of(
         "type", "DESPESA",
         "categoria", "Alimentacao",
         "valor", "-100.0",
         "data", LocalDate.of(2022, 01, 02).toString()));
-        extrato.add(Map.of(
-        "type", "DESPESA",
-        "categoria", "Alimentacao",
-        "valor", "-100.0",
-        "data", LocalDate.of(2022, 01, 03).toString()));
         
-        when(lancamentos.getAll()).thenReturn(extrato);
-         ArrayList<Map<String, String>> saldoPeriodo = this.lancamentos.getPorPeriodo(
-                LocalDate.of(2022, 1, 1),
-                LocalDate.of(2022, 1, 2));
         
-         ArrayList<Map<String, String>> saldoPeriodoRetornado = new ArrayList<>();
-         saldoPeriodoRetornado.add(extrato.get(0));
-         saldoPeriodoRetornado.add(extrato.get(1));
-         
-         verify(lancamentos, times(1)).getAll();
-         assertEquals(saldoPeriodoRetornado, saldoPeriodo);
-
+        when(lancamentos.getPorPeriodo(LocalDate.of(2022,01,01), LocalDate.of(2022,01,02))).thenReturn(listaLancamentos);
+        double saldoPeriodo = this.contador.getSaldoPorPeriodo(LocalDate.of(2022,01,01), LocalDate.of(2022,01,02));
+                
+         assertEquals(2900, saldoPeriodo, 0.0001);
     }
 
     @Test
