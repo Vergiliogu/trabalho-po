@@ -26,3 +26,6 @@ replay_pid*
 # IDE
 
 .vscode
+/nbproject/
+/target/
+.ds_store

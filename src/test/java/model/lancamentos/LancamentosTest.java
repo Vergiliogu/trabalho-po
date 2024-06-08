@@ -62,11 +62,11 @@ public class LancamentosTest {
 
     when(db.getAll()).thenReturn(mockReturn);
 
-    ArrayList<Map<String, String>> lancamentos = this.lancamentos.getAll();
+    ArrayList<Map<String, String>> extrato = this.lancamentos.getAll();
 
     // Assertions
     verify(db, times(1)).getAll();
-    assertEquals(mockReturn, lancamentos);
+    assertEquals(mockReturn, extrato);
   }
 
   @Test
@@ -81,7 +81,7 @@ public class LancamentosTest {
 
   @Test
   public void shouldFilterLancamentosByDateCorrectly() {
-    ArrayList<Map<String, String>> mockReturn = new ArrayList<Map<String, String>>();
+    ArrayList<Map<String, String>> mockReturn = new ArrayList<>();
     mockReturn.add(Map.of(
         "type", "RECEITA",
         "categoria", "Salario",
@@ -100,16 +100,16 @@ public class LancamentosTest {
 
     when(db.getAll()).thenReturn(mockReturn);
 
-    ArrayList<Map<String, String>> lancamentos = this.lancamentos.getPorPeriodo(
+    ArrayList<Map<String, String>> extrato = this.lancamentos.getPorPeriodo(
         LocalDate.of(2022, 1, 1),
         LocalDate.of(2022, 1, 2));
 
-    ArrayList<Map<String, String>> expectedReturn = new ArrayList<Map<String, String>>();
+    ArrayList<Map<String, String>> expectedReturn = new ArrayList<>();
     expectedReturn.add(mockReturn.get(0));
     expectedReturn.add(mockReturn.get(1));
 
     // Assertions
     verify(db, times(1)).getAll();
-    assertEquals(expectedReturn, lancamentos);
+    assertEquals(expectedReturn, extrato);
   }
 }
