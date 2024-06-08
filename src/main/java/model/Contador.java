@@ -19,8 +19,8 @@ public class Contador {
     return this.saldo;
   }
 
-  public double getSaldoPorPeriodo(LocalDate dataFinal) {
-    ArrayList<Map<String, String>> listaLancamentos = this.lancamentos.getPorPeriodo(dataFinal);
+  public double getSaldoPorPeriodo(LocalDate dataInicial, LocalDate dataFinal) {
+    ArrayList<Map<String, String>> listaLancamentos = this.lancamentos.getPorPeriodo(dataInicial, dataFinal);
     return this.calcularSaldo(listaLancamentos);
   }
 
