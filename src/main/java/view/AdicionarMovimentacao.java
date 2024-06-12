@@ -28,17 +28,31 @@ public class AdicionarMovimentacao extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
+        tpMovimentacaoTitulo = new javax.swing.JLabel();
         rbEntradaReceitas = new javax.swing.JRadioButton();
         rbSaidaDespesas = new javax.swing.JRadioButton();
         jbVoltarAddMovimentacao = new javax.swing.JButton();
         jbProximoAddMovimentacao = new javax.swing.JButton();
+        SelecionarCatDespesa = new javax.swing.JLabel();
+        rbAlimentacao = new javax.swing.JRadioButton();
+        rbTransporte = new javax.swing.JRadioButton();
+        rbAluguel = new javax.swing.JRadioButton();
+        rbSaude = new javax.swing.JRadioButton();
+        rbEducacao = new javax.swing.JRadioButton();
+        rbEntretenimento = new javax.swing.JRadioButton();
+        SelecionarCatReceita = new javax.swing.JLabel();
+        rbSalario = new javax.swing.JRadioButton();
+        rbDecimoTerceiro = new javax.swing.JRadioButton();
+        rbFerias = new javax.swing.JRadioButton();
+        addBotao = new javax.swing.JButton();
+        tfValormovimentacao = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Adicionar Movimentacao");
 
-        jLabel2.setText("Tipo da Movimentacao:");
+        tpMovimentacaoTitulo.setText("Tipo da Movimentacao:");
 
         rbEntradaReceitas.setText("Entrada de Receita");
         rbEntradaReceitas.addActionListener(new java.awt.event.ActionListener() {
@@ -53,35 +67,99 @@ public class AdicionarMovimentacao extends javax.swing.JFrame {
 
         jbProximoAddMovimentacao.setText("PRÓXIMO");
 
+        SelecionarCatDespesa.setText("Selecione a categoria: ");
+
+        rbAlimentacao.setText("Alimentação");
+
+        rbTransporte.setText("Transporte");
+
+        rbAluguel.setText("Aluguel");
+
+        rbSaude.setText("Saude");
+
+        rbEducacao.setText("Educação");
+
+        rbEntretenimento.setText("Entretenimento");
+
+        SelecionarCatReceita.setText("Selecione a categoria: ");
+
+        rbSalario.setText("Salario");
+
+        rbDecimoTerceiro.setText("Décimo Terceiro");
+
+        rbFerias.setText("Férias");
+
+        addBotao.setText("ADICIONAR");
+
+        jLabel5.setText("Valor");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jSeparator1)
-                        .addContainerGap())
+                    .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
+                            .addComponent(tpMovimentacaoTitulo)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(rbEntradaReceitas)
-                                .addGap(63, 63, 63)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addComponent(rbFerias)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(tfValormovimentacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(addBotao)
+                                        .addGap(56, 56, 56)
                                         .addComponent(jbVoltarAddMovimentacao)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jbProximoAddMovimentacao))
-                                    .addComponent(rbSaidaDespesas))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jbProximoAddMovimentacao)
+                                        .addGap(132, 132, 132))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(SelecionarCatReceita)
+                                                    .addComponent(rbSalario)
+                                                    .addComponent(rbDecimoTerceiro))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(rbEntradaReceitas)
+                                                .addGap(152, 152, 152)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(SelecionarCatDespesa)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(rbAlimentacao)
+                                                    .addComponent(rbSaude))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(rbTransporte)
+                                                    .addComponent(rbEducacao))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(26, 26, 26)
+                                                        .addComponent(rbAluguel))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(rbEntretenimento))))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGap(20, 20, 20)
+                                                .addComponent(rbSaidaDespesas)
+                                                .addGap(160, 160, 160)))
+                                        .addGap(93, 93, 93)))))))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(209, 209, 209)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,18 +167,49 @@ public class AdicionarMovimentacao extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rbEntradaReceitas)
-                    .addComponent(rbSaidaDespesas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbVoltarAddMovimentacao)
-                    .addComponent(jbProximoAddMovimentacao))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(rbEntradaReceitas)
+                        .addGap(18, 18, 18)
+                        .addComponent(SelecionarCatReceita)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rbSalario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rbDecimoTerceiro))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tpMovimentacaoTitulo))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(rbSaidaDespesas)
+                        .addGap(18, 18, 18)
+                        .addComponent(SelecionarCatDespesa)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rbAlimentacao)
+                            .addComponent(rbTransporte)
+                            .addComponent(rbAluguel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rbSaude)
+                            .addComponent(rbEducacao)
+                            .addComponent(rbEntretenimento))))
+                .addGap(12, 12, 12)
+                .addComponent(rbFerias)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbVoltarAddMovimentacao)
+                            .addComponent(jbProximoAddMovimentacao))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(addBotao)
+                            .addComponent(tfValormovimentacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(20, 20, 20))))
         );
 
         pack();
@@ -146,12 +255,26 @@ public class AdicionarMovimentacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel SelecionarCatDespesa;
+    private javax.swing.JLabel SelecionarCatReceita;
+    private javax.swing.JButton addBotao;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton jbProximoAddMovimentacao;
     private javax.swing.JButton jbVoltarAddMovimentacao;
+    private javax.swing.JRadioButton rbAlimentacao;
+    private javax.swing.JRadioButton rbAluguel;
+    private javax.swing.JRadioButton rbDecimoTerceiro;
+    private javax.swing.JRadioButton rbEducacao;
     private javax.swing.JRadioButton rbEntradaReceitas;
+    private javax.swing.JRadioButton rbEntretenimento;
+    private javax.swing.JRadioButton rbFerias;
     private javax.swing.JRadioButton rbSaidaDespesas;
+    private javax.swing.JRadioButton rbSalario;
+    private javax.swing.JRadioButton rbSaude;
+    private javax.swing.JRadioButton rbTransporte;
+    private javax.swing.JTextField tfValormovimentacao;
+    private javax.swing.JLabel tpMovimentacaoTitulo;
     // End of variables declaration//GEN-END:variables
 }
