@@ -35,22 +35,6 @@
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="rbFerias" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel5" min="-2" pref="35" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="tfValormovimentacao" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="addBotao" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                      <Component id="jbVoltarAddMovimentacao" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jbProximoAddMovimentacao" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -88,13 +72,28 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                                              <Component id="rbSaidaDespesas" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="rbSaidaDespesas" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel5" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="tfValormovimentacao" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jLabel6" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="tfData" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="rbFerias" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jbVoltarAddMovimentacao" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="addBotao" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -104,7 +103,7 @@
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="209" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -116,7 +115,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                       <Component id="rbEntradaReceitas" min="-2" max="-2" attributes="0"/>
@@ -131,10 +130,9 @@
                       <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tpMovimentacaoTitulo" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="rbSaidaDespesas" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="SelecionarCatDespesa" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -150,24 +148,26 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-              <Component id="rbFerias" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="14" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="rbFerias" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jbVoltarAddMovimentacao" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jbProximoAddMovimentacao" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="addBotao" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="tfValormovimentacao" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfData" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jbVoltarAddMovimentacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addBotao" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -199,16 +199,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Saida de Despesas"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbSaidaDespesasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbVoltarAddMovimentacao">
       <Properties>
         <Property name="text" type="java.lang.String" value="VOLTAR"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jbProximoAddMovimentacao">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="PR&#xd3;XIMO"/>
-      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbVoltarAddMovimentacaoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="SelecionarCatDespesa">
       <Properties>
@@ -269,12 +270,34 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="ADICIONAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addBotaoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="tfValormovimentacao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="R$______"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfValormovimentacaoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Valor"/>
+        <Property name="text" type="java.lang.String" value="Valor:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="tfData">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="__/__/___"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfDataActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Data:"/>
       </Properties>
     </Component>
   </SubComponents>

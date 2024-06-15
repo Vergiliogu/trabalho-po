@@ -1,13 +1,19 @@
 
 package view;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ControleFinanceiro extends javax.swing.JFrame {
 
+public class ControleFinanceiro extends JFrame {
+   
     public ControleFinanceiro() {
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
+     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -23,6 +29,11 @@ public class ControleFinanceiro extends javax.swing.JFrame {
         tituloControleFinanceiro.setText("Controle Financeiro");
 
         rbAddMovimentacao.setText("Adicionar Movimentação");
+        rbAddMovimentacao.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                rbAddMovimentacaoStateChanged(evt);
+            }
+        });
         rbAddMovimentacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbAddMovimentacaoActionPerformed(evt);
@@ -30,6 +41,11 @@ public class ControleFinanceiro extends javax.swing.JFrame {
         });
 
         rbConsultarMovimentacao.setText("Consultar Movimentação");
+        rbConsultarMovimentacao.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                rbConsultarMovimentacaoStateChanged(evt);
+            }
+        });
         rbConsultarMovimentacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbConsultarMovimentacaoActionPerformed(evt);
@@ -94,27 +110,46 @@ public class ControleFinanceiro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    // botão adicionar movimentação acionado
+ private void abrirAddmovimentacao() {
+      AdicionarMovimentacao add = new AdicionarMovimentacao();
+       add.setVisible(true);
+    }
+
+    private void abrirConsultarMovimentacoes() {
+      ConsultarMovimentacao cons = new ConsultarMovimentacao();
+      cons.setVisible(true);
+    }
+// botão adicionar movimentação acionado
     private void rbAddMovimentacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAddMovimentacaoActionPerformed
-        
+         
     }//GEN-LAST:event_rbAddMovimentacaoActionPerformed
     // botão consultar movimentação selecionado
-    
     private void rbConsultarMovimentacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbConsultarMovimentacaoActionPerformed
-        
+           
+      
     }//GEN-LAST:event_rbConsultarMovimentacaoActionPerformed
     // botão sair acionado
     private void jbSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSairActionPerformed
-        
+        System.exit(0);
     }//GEN-LAST:event_jbSairActionPerformed
     // botão próximo acionado
     private void jbProximoControleFinanceiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbProximoControleFinanceiroActionPerformed
-      
+      if(rbAddMovimentacao.isSelected()&& !rbConsultarMovimentacao.isSelected()){
+         abrirAddmovimentacao();
+      } else if(rbConsultarMovimentacao.isSelected()&& !rbAddMovimentacao.isSelected()){
+         abrirConsultarMovimentacoes();
+      } else { 
+           JOptionPane.showMessageDialog(null, "Por favor, selecione apenas uma opção.");
+      }
     }//GEN-LAST:event_jbProximoControleFinanceiroActionPerformed
 
-    
-    
-  
+    private void rbAddMovimentacaoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rbAddMovimentacaoStateChanged
+    }//GEN-LAST:event_rbAddMovimentacaoStateChanged
+
+    private void rbConsultarMovimentacaoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rbConsultarMovimentacaoStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbConsultarMovimentacaoStateChanged
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -155,4 +190,6 @@ public class ControleFinanceiro extends javax.swing.JFrame {
     private javax.swing.JSeparator separadorLayout;
     private javax.swing.JLabel tituloControleFinanceiro;
     // End of variables declaration//GEN-END:variables
+
+  
 }

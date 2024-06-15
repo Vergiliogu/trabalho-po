@@ -139,6 +139,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="__/__/____"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ftfDataInicialConsultaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -149,6 +152,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="__/__/____"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ftfDataFinalConsultaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -159,6 +165,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Entradas"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbConsultaEntradasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rbConsultaSaidas">
       <Properties>
@@ -174,16 +183,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="OK"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbOKActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbVoltarConsulta">
       <Properties>
         <Property name="text" type="java.lang.String" value="VOLTAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbVoltarConsultaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbSairConsulta">
       <Properties>
         <Property name="text" type="java.lang.String" value="SAIR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSairConsultaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

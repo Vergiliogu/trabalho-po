@@ -84,6 +84,7 @@
         <Property name="text" type="java.lang.String" value="Adicionar Movimenta&#xe7;&#xe3;o"/>
       </Properties>
       <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="rbAddMovimentacaoStateChanged"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbAddMovimentacaoActionPerformed"/>
       </Events>
     </Component>
@@ -92,6 +93,7 @@
         <Property name="text" type="java.lang.String" value="Consultar Movimenta&#xe7;&#xe3;o"/>
       </Properties>
       <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="rbConsultarMovimentacaoStateChanged"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbConsultarMovimentacaoActionPerformed"/>
       </Events>
     </Component>
