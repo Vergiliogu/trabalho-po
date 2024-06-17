@@ -25,4 +25,18 @@ public class LancamentosReceita extends Lancamentos {
 
     return listaReceita;
   }
+
+  @Override
+  public ArrayList<Map<String, String>> getPorPeriodo(LocalDate dataInicial, LocalDate dataFinal) {
+    ArrayList<Map<String, String>> listaLancamentos = super.getPorPeriodo(dataInicial, dataFinal);
+    ArrayList<Map<String, String>> listaReceita = new ArrayList<Map<String, String>>();
+
+    for (Map<String, String> i : listaLancamentos) {
+      if (i.get("type").equals(TiposCategorias.RECEITA.toString())) {
+        listaReceita.add(i);
+      }
+    }
+
+    return listaReceita;
+  }
 }
