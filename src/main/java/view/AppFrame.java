@@ -5,6 +5,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class AppFrame extends javax.swing.JFrame {
+    private RegistroMovimentacao registroMovimentacao;
+    private Extrato extrato;
+    private Navigation navigation;
+
     public AppFrame() {
         initComponents();
     }
@@ -16,15 +20,15 @@ public class AppFrame extends javax.swing.JFrame {
 
         JPanel mainPanel = new JPanel(new BorderLayout());
 
-        JPanel addMovimentacao = new RegistroMovimentacao();
-        JPanel consultarMovimentacao = new Extrato();
-        JPanel navigation = new Navigation(
+        registroMovimentacao = new RegistroMovimentacao();
+        extrato = new Extrato();
+        navigation = new Navigation(
                 this,
                 mainPanel,
-                addMovimentacao,
-                consultarMovimentacao);
+                registroMovimentacao,
+                extrato);
 
-        mainPanel.add(addMovimentacao, BorderLayout.CENTER);
+        mainPanel.add(extrato, BorderLayout.CENTER);
         getContentPane().add(navigation, BorderLayout.NORTH);
         getContentPane().add(mainPanel, BorderLayout.CENTER);
 
