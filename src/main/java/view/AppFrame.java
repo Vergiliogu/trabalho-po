@@ -30,12 +30,4 @@ public class AppFrame extends javax.swing.JFrame {
 
         pack();
     }
-
-    public static void main(String args[]) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AppFrame().setVisible(true);
-            }
-        });
-    }
 }
