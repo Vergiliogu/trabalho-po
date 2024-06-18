@@ -18,10 +18,6 @@ import model.lancamentos.Lancamentos;
 import model.lancamentos.LancamentosDespesa;
 import model.lancamentos.LancamentosReceita;
 
-/**
- *
- * @author vergiliogu
- */
 public class Extrato extends javax.swing.JPanel {
 
     private Lancamentos lancamentos = new Lancamentos();

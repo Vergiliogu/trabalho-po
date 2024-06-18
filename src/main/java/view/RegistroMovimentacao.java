@@ -16,10 +16,6 @@ import java.util.Date;
 
 import javax.swing.JLabel;
 
-/**
- *
- * @author vergiliogu
- */
 public class RegistroMovimentacao extends javax.swing.JPanel {
 
     private LancamentosReceita lancamentosReceita = new LancamentosReceita();

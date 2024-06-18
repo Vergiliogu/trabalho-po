@@ -5,15 +5,24 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import model.DB;
-import model.enums.TiposCategorias; //  o que é DB? 
+import model.enums.TiposCategorias;
 
+/**
+ * A class to manage financial records, allowing for insertion and retrieval of
+ * entries.
+ */
 public class Lancamentos {
   private DB db = new DB();
 
-  // A categoria, despesa ou receita é buscada pelo type.
+  /**
+   * Registers a new entry in the database.
+   *
+   * @param type      the type of category for the entry.
+   * @param categoria the specific category of the entry.
+   * @param valor     the value of the entry.
+   * @param data      the date of the entry.
+   */
   protected void cadastrarInDb(TiposCategorias type, Enum<?> categoria, double valor, LocalDate data) {
-    // Variavel criada para representar que é uma string que vai ser formatada
-    // conforme o dado inserido.
     String formattedString = String.format(
         "%s,%s,%s,%s",
         type,
@@ -24,10 +33,25 @@ public class Lancamentos {
     this.db.insert(formattedString);
   }
 
+  /**
+   * Retrieves all records from the database.
+   *
+   * @return an ArrayList of Maps, where each Map represents a record with keys
+   *         "type", "categoria", "valor", and "data".
+   */
   public ArrayList<Map<String, String>> getAll() {
     return this.db.getAll();
   }
 
+  /**
+   * Retrieves records within a specified period.
+   *
+   * @param dataInicial the start date of the period.
+   * @param dataFinal   the end date of the period.
+   * @return an ArrayList of Maps, where each Map represents a record within the
+   *         specified period.
+   * @throws IllegalArgumentException if the start date is after the end date.
+   */
   public ArrayList<Map<String, String>> getPorPeriodo(LocalDate dataInicial, LocalDate dataFinal) {
     if (dataInicial.isAfter(dataFinal)) {
       throw new IllegalArgumentException("Data inicial não pode ser maior que a data final");
@@ -52,6 +76,4 @@ public class Lancamentos {
 
     return lancamentosFiltrados;
   }
-
-    
 }

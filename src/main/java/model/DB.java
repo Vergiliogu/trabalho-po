@@ -5,20 +5,30 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import io.github.cdimascio.dotenv.Dotenv;
 
-import io.github.cdimascio.dotenv.Dotenv;// import da biblioteca Dotenv, utilizada para criar um arquivo .env na raiz do projeto, podendo ser criadas variaveis dentro dele. 
-
-// Essa classe existe para que não precise ser solicitado o caminho do arquivo mais vezes, apenas alterar a linha 18 
-
-
+/**
+ * A class to handle basic database operations such as inserting data and
+ * retrieving all records.
+ */
 public class DB {
   private String fileName;
 
+  /**
+   * Constructs a new DB instance and loads the database file name from
+   * environment variables.
+   */
   public DB() {
     Dotenv dotenv = Dotenv.load();
-    this.fileName = dotenv.get("DB_FILE"); // utilizado para não escrever no código principal. Podendo ser alterado por aqui
+    this.fileName = dotenv.get("DB_FILE");
   }
 
+  /**
+   * Inserts a new line into the database file.
+   *
+   * @param line the line to be inserted into the file.
+   * @return true if the line was successfully inserted, false otherwise.
+   */
   public boolean insert(String line) {
     try {
       Files.write(
@@ -32,6 +42,12 @@ public class DB {
     }
   }
 
+  /**
+   * Retrieves all records from the database file.
+   *
+   * @return an ArrayList of Maps, where each Map represents a record with keys
+   *         "type", "categoria", "valor", and "data".
+   */
   public ArrayList<Map<String, String>> getAll() {
     try {
       List<String> fileLines = Files.readAllLines(Paths.get(this.fileName));
