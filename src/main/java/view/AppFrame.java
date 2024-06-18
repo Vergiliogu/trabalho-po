@@ -11,6 +11,7 @@ public class AppFrame extends javax.swing.JFrame {
 
     private void initComponents() {
         setTitle("Controle de Finanças");
+        setPreferredSize(new Dimension(545, 350));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel(new BorderLayout());
