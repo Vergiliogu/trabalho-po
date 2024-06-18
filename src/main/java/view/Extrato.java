@@ -221,10 +221,15 @@ public class Extrato extends javax.swing.JPanel {
                     : lancamentos.getPorPeriodo(formatedDataInicial, formatedDataFinal);
         }
 
+        foundLancamentos.sort((lancamento1, lancamento2) -> {
+            LocalDate data1 = LocalDate.parse(lancamento1.get("data"));
+            LocalDate data2 = LocalDate.parse(lancamento2.get("data"));
+            return data2.compareTo(data1);
+        });
+
         double saldoPeriodo = 0;
 
-        for (int i = foundLancamentos.size() - 1; i >= 0; i--) {
-            Map<String, String> lancamento = foundLancamentos.get(i);
+        for (Map<String, String> lancamento: foundLancamentos) {
             saldoPeriodo += Double.parseDouble(lancamento.get("valor"));
 
             tableModel.addRow(new Object[] {
