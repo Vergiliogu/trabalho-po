@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.Dimension;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -38,6 +39,11 @@ public class Extrato extends javax.swing.JPanel {
      */
     public Extrato() {
         initComponents();
+    }
+
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(545, 270); // Set your desired dimensions here
     }
 
     /**

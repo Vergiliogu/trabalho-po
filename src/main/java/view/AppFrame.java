@@ -15,14 +15,15 @@ public class AppFrame extends javax.swing.JFrame {
 
         JPanel mainPanel = new JPanel(new BorderLayout());
 
-        JPanel addMovimentacao = new AdicionarMovimentacao();
+        JPanel addMovimentacao = new RegistroMovimentacao();
         JPanel consultarMovimentacao = new Extrato();
         JPanel navigation = new Navigation(
+                this,
                 mainPanel,
                 addMovimentacao,
                 consultarMovimentacao);
 
-        mainPanel.add(consultarMovimentacao, BorderLayout.CENTER);
+        mainPanel.add(addMovimentacao, BorderLayout.CENTER);
         getContentPane().add(navigation, BorderLayout.NORTH);
         getContentPane().add(mainPanel, BorderLayout.CENTER);
 
